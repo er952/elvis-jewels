@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis Jewels</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <img src="images/logo.png"
+                 alt="Elvis Jewels Logo"
+                 class="logo">
+
+            <div>
+                <h1>ELVIS JEWELS</h1>
+                <p>Luxury Jewelry Collection</p>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#products">Collection</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>TIMELESS LUXURY & ELEGANCE</h2>
+
+            <p>
+                Discover premium jewelry crafted to celebrate
+                beauty, confidence and unforgettable moments.
+            </p>
+
+            <a href="#products">
+                <button class="hero-btn">
+                    Shop Now
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
+        <h2 class="section-title">Our Collection</h2>
+
+        <div class="products">
+
+            <div class="card">
+                <img src="images/men necklace.jpg" alt="">
+                <h3>Men Necklace</h3>
+                <p>₦15,000</p>
+                <button onclick="addToCart('Men Necklace',15000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/cross-necklace.jpg" alt="">
+                <h3>Cross Necklace</h3>
+                <p>₦4,500</p>
+                <button onclick="addToCart('Cross Necklace',4500)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/flower-earring.jpg" alt="">
+                <h3>Flower Earrings</h3>
+                <p>₦5,000</p>
+                <button onclick="addToCart('Flower Earrings',5000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/hello.jpg" alt="">
+                <h3>Hello Kitty Necklace (Big)</h3>
+                <p>₦6,000</p>
+                <button onclick="addToCart('Hello Kitty Necklace',6000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/leg-chain.jpg" alt="">
+                <h3>Leg Chain</h3>
+                <p>₦4,000</p>
+                <button onclick="addToCart('Leg Chain',4000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/gold-bangles.jpg" alt="">
+                <h3>Gold Bangles</h3>
+                <p>₦5,000</p>
+                <button onclick="addToCart('Gold Bangles',5000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/couple.jpg" alt="">
+                <h3>Friendship Necklace (EACH)</h3>
+                <p>₦3,500</p>
+                <button onclick="addToCart('Friendship Necklace',3500)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/ring.jpg" alt="">
+                <h3>Pearl Set</h3>
+                <p>₦7,000</p>
+                <button onclick="addToCart('Pearl Set',7000)">
+                    Add To Cart
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="images/butterfly.jpg" alt="">
+                <h3>Butterfly Necklace</h3>
+                <p>₦2,500</p>
+                <button onclick="addToCart('Butterfly Necklace',2500)">
+                    Add To Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+   <!-- CART ICON -->
+
+<div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- SIDE CART -->
+
+<div id="cart-panel" class="cart-panel">
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button onclick="toggleCart()">
+            ✕
+        </button>
+
+    </div>
+
+    <ul id="cart-items"></ul>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total: ₦<span id="cart-total">0</span>
+        </h3>
+
+        <button class="checkout-btn"
+                onclick="checkoutWhatsApp()">
+
+            Checkout on WhatsApp
+
+        </button>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- TESTIMONIALS -->
+
+    <section class="testimonials">
+
+        <h2>What Our Customers Say</h2>
+
+        <div class="testimonial-box">
+            <p>
+                "Absolutely beautiful jewelry. The quality exceeded my expectations."
+            </p>
+            <h4>- Sarah A.</h4>
+        </div>
+
+        <div class="testimonial-box">
+            <p>
+                "Fast delivery and amazing customer service."
+            </p>
+            <h4>- Daniel O.</h4>
+        </div>
+
+        <div class="testimonial-box">
+            <p>
+                "My necklace still looks brand new after months."
+            </p>
+            <h4>- Grace E.</h4>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <h2>About Elvis Jewels</h2>
+
+        <p>
+            Elvis Jewels is dedicated to providing elegant and affordable
+            jewelry for every occasion. Our mission is to help our customers
+            express their beauty and confidence through carefully selected
+            necklaces, bracelets, earrings, rings and fashion accessories.
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📞 +234 903 594 0040</p>
+
+        <p>📍 Rivers State, Nigeria</p>
+
+        <p>📧 elvisjewels@email.com</p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>ELVIS JEWELS</h3>
+
+        <p>Luxury Jewelry Collection</p>
+
+        <p>© 2026 Elvis Jewels. All Rights Reserved.</p>
+
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a href="https://wa.me/2349035940040"
+       target="_blank"
+       class="whatsapp-float">
+        💬
+    </a>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
